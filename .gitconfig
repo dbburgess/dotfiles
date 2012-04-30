@@ -1,0 +1,10 @@
+[user]
+	name = $GIT_COMMITTER_NAME
+	email = $GIT_COMMITER_EMAIL
+[github]
+	user = $GITHUB_USERNAME
+	token = $GITHUB_TOKEN
+[color]
+	ui = auto
+[core]
+	editor = vim

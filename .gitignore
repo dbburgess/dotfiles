@@ -1,0 +1,10 @@
+.ssh
+.bash_history
+.local-settings
+.viminfo
+.vim/.netrwhist
+.vim/backup
+.neocon
+.npm
+.lesshst
+.pearrc
