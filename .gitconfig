@@ -1,3 +1,5 @@
+[color]
+    ui = auto
 [user]
     name = $GIT_COMMITTER_NAME
     email = $GIT_COMMITER_EMAIL
