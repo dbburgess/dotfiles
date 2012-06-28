@@ -39,7 +39,7 @@ set_ps1() {
 	dir_str="\[$_cwd_col\]\w"
 	git_branch=`parse_git_branch`
 	git_dirty=`parse_git_dirty`
-	ruby=`parse_ruby_version`
+	#ruby=`parse_ruby_version`
 
 	git_str="\[$_git_col\]$git_branch\[$_wrn_col\]$git_dirty"
 	# Git repo & ruby version
