@@ -36,7 +36,7 @@ else
 	if [ -f "$SSH_ENV" ]; then
 		. "$SSH_ENV" > /dev/null
 	fi
-	ps -ef | grep "$SSH_AGENT_PID" | grep -v grep | grep ssh-agent > /dev/null
+	ps -ef | grep "$SSH_AGENT_PID" | grep -v grep | grep $UID | grep ssh-agent > /dev/null
 	if [ $? -eq 0 ]; then
 		test_identities
 	else
