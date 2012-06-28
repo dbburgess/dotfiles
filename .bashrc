@@ -2,6 +2,23 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# Helpful function to lowercase a string, for easy comparison.
+lowercase() {
+    echo "$1" | sed "y/ABCDEFGHIJKLMNOPQRSTUVWXYZ/abcdefghijklmnopqrstuvwxyz/"
+}
+
+# Get the current OS name.
+OS=`lowercase \`uname\``
+
+# Detect which OS we are on.
+# This isn't a very robust detection,
+# but it is all I care about for now.
+if [ $OS == 'darwin' ]; then
+    OS=mac
+else
+    OS=ubuntu
+fi
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -93,9 +110,15 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# TODO: See if bash completion above is what is making it work on servers, and use that?
+
 # Include various useful files.
 source ~/.bash/prompt.sh
-source ~/.bash/sshagent.sh
+
+# Don't include ssh-agent on mac, since it is built in.
+if [ $OS != 'mac' ]; then
+    source ~/.bash/sshagent.sh
+fi
 
 # Include the local settings on this computer.
 # This is where sensitive stuff goes, like github tokens.
