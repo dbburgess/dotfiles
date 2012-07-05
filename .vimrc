@@ -13,7 +13,7 @@ set hidden " Ensure buffers aren't unloaded prematurely.
 set ttyfast " Set that we have a fast connection for this terminal.
 set nofoldenable " Disable folding, I don't really like it in vim.
 set t_Co=256 " Enable 256 colors
-colorscheme inkpot " Set a nice colorscheme.
+colorscheme Tomorrow-Night-Bright " Set a nice colorscheme.
 syntax enable " Enable syntax highlighting.
 
 " Remap the <leader> to ,.
