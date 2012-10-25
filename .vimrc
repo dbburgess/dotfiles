@@ -66,10 +66,6 @@ autocmd WinEnter * setlocal cursorcolumn
 autocmd WinLeave * setlocal nocursorline
 autocmd WinLeave * setlocal nocursorcolumn
 
-" Map a hotkey to easily enable/disable the targeting reticule.
-" This is useful, because performance with it on can be kind of slow at times.
-:nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-
 " Settings for moving / searching.
 set ignorecase " Set searching to ignore case by default.
 set smartcase " Set searching to care about case, when you use uppercase.
@@ -93,6 +89,16 @@ vnoremap / /\v
 " ------------------------------ "
 " Use <leader>s to show / hide whitespace.
 nmap <silent> <leader>s :set nolist!<CR>
+
+" Map a hotkey to easily enable/disable the targeting reticule.
+" This is useful, because performance with it on can be kind of slow at times.
+:nnoremap <leader>c :set cursorline! cursorcolumn!<CR>
+
+" Easily show / hide the number line.
+:nnoremap <leader>l :set number!<CR>
+
+" Easily show / hide all of the extra features (makes it easy to copy/paste).
+:nnoremap <leader>d :set nolist! cursorline! number!<CR>
 
 " Use jj to escape insert mode.
 inoremap jj <ESC>
