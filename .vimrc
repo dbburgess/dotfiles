@@ -115,6 +115,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+" Format json files easily.
+" You must run this to enable it: sudo cpan JSON::XS
+map <leader>jf <Esc>:%!json_xs -f json -t json-pretty<CR>
 
 
 " Enable Neocomplcache plugin (for awesome auto-complete).
