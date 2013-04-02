@@ -13,3 +13,6 @@
     autocrlf = input
 [merge]
 	conflictstyle = diff3
+[alias]
+    todo = grep --ignore-case -e ' FIX: *' -e ' TODO: *'
+    ass = !echo 'What kind of git do you think I am?'
