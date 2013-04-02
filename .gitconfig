@@ -11,3 +11,5 @@
 [core]
     editor = vim
     autocrlf = input
+[merge]
+	conflictstyle = diff3
