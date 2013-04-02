@@ -114,6 +114,7 @@ fi
 
 # Include various useful files.
 source ~/.bash/prompt.sh
+source ~/.bash/git-completion.bash
 
 # Don't include ssh-agent on mac, since it is built in.
 if [ $OS != 'mac' ]; then
