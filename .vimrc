@@ -100,6 +100,9 @@ nmap <silent> <leader>s :set nolist!<CR>
 " Easily show / hide all of the extra features (makes it easy to copy/paste).
 :nnoremap <leader>d :set nolist! cursorline! number!<CR>
 
+" Easily turn on / off paste mode.
+:nnoremap <leader>p :set paste!<CR>
+
 " Use jj to escape insert mode.
 inoremap jj <ESC>
 
