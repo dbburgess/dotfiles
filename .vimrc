@@ -1,7 +1,3 @@
-" Load the Pathogen plugin, which makes managing plugins awesome.
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-
 " Enable plugins and indentation.
 filetype plugin on
 filetype indent on
