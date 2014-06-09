@@ -4,6 +4,7 @@
 .viminfo
 .vim/.netrwhist
 .vim/backup
+.vim/swapfiles
 .neocon
 .npm
 .lesshst

@@ -37,6 +37,9 @@ set wildmode=list:longest,full
 set backup " Enable backups.
 set backupdir=~/.vim/backup " Set a custom backup directory, so we don't clutter up working directories.
 
+" Set a custom swap file directory, so we don't clutter up working directories.
+set directory=~/.vim/swapfiles// " The // at the end ensures the filename is unique, as it uses the full file path instead of just the name.
+
 " Tab / indentation settings.
 set tabstop=4 " Tabs should be displayed as 4 columns.
 set shiftwidth=4 " Set the number of columns for reindent operations.
