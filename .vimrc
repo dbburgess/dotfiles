@@ -94,6 +94,9 @@ autocmd WinEnter * setlocal cursorcolumn
 autocmd WinLeave * setlocal nocursorline
 autocmd WinLeave * setlocal nocursorcolumn
 
+" Force md files to be markdown, instead of Modula-2.
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " Settings for moving / searching.
 set ignorecase " Set searching to ignore case by default.
 set smartcase " Set searching to care about case, when you use uppercase.
