@@ -1,9 +1,38 @@
-" Enable plugins and indentation.
-filetype plugin on
-filetype indent on
+" --- Begin Vundle Configuration ----------------------------- "
+set nocompatible " Remove vi compatability, we don't need that.
+filetype off
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" --- Vundle Plugin Management ------------------------------- "
+
+
+" --- Finish Vundle Configuration ---------------------------- "
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" ------------------------------------------------------------ "
 
 " General / functional settings.
-set nocompatible " Remove vi compatability, we don't need that.
 set encoding=utf-8 " Set a proper encoding.
 set hidden " Ensure buffers aren't unloaded prematurely.
 set ttyfast " Set that we have a fast connection for this terminal.
