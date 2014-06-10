@@ -11,6 +11,10 @@ Plugin 'gmarik/Vundle.vim'
 
 " --- Vundle Plugin Management ------------------------------- "
 
+" Fun UI plugins.
+Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-fugitive'
+
 " Language-specific plugins.
 Bundle 'groenewege/vim-less'
 
@@ -164,6 +168,9 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " Strip trailing whitespace from all lines when saving.
 autocmd BufWritePre * :%s/\s\+$//e
+
+" vim-airline configuration.
+let g:airline_powerline_fonts = 1
 
 " Stuff to think about / try out:
 " :help shortmess=???
