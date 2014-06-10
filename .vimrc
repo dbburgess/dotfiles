@@ -11,6 +11,8 @@ Plugin 'gmarik/Vundle.vim'
 
 " --- Vundle Plugin Management ------------------------------- "
 
+" Language-specific plugins.
+Bundle 'groenewege/vim-less'
 
 " --- Finish Vundle Configuration ---------------------------- "
 
