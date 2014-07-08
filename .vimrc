@@ -14,6 +14,8 @@ Plugin 'gmarik/Vundle.vim'
 " Fun UI plugins.
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
+Bundle 'wincent/Command-T'
+Bundle 'Valloric/YouCompleteMe'
 
 " Language-specific plugins.
 Bundle 'groenewege/vim-less'
