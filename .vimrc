@@ -1,44 +1,44 @@
-" --- Begin Vundle Configuration ----------------------------- "
-set nocompatible " Remove vi compatability, we don't need that.
-filetype off
+" Remove vi compatability, we don't need that.
+set nocompatible
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" --- Begin vim-plug Configuration --------------------------- "
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" Automagically install vim-plug if it isn't installed already.
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
 
-" --- Vundle Plugin Management ------------------------------- "
+" --- vim-plug Plugin Management ----------------------------- "
+call plug#begin('~/.vim/plugged')
 
+" -------------------------------
+" Crucial core functional plugins.
+" -------------------------------
+
+" Command-T for sweet intelligent file finder.
+" Command-T requires compliation with ruby. The version of ruby must match the
+" version of ruby vim is using. This is an awkward / unreliable way for this.
+" The path given here refers to our port install of ruby.
+Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && /opt/local/bin/ruby2.0 extconf.rb && make' }
+
+" YouCompleteMe for awesome auto completion.
+" YouCompleteMe requires compilation with python.
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+
+" -------------------------------
 " Fun UI plugins.
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'wincent/Command-T'
-Bundle 'Valloric/YouCompleteMe'
+" -------------------------------
+Plug 'vim-airline/vim-airline' " Sweet upgraded status bar.
 
+" -------------------------------
 " Language-specific plugins.
-Bundle 'groenewege/vim-less'
+" -------------------------------
+Plug 'groenewege/vim-less', { 'for': 'less' }
 
-" --- Finish Vundle Configuration ---------------------------- "
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-" ------------------------------------------------------------ "
+call plug#end()
+" --- Finish vim-plug Configuration -------------------------- "
 
 " General / functional settings.
 set encoding=utf-8 " Set a proper encoding.
@@ -47,7 +47,6 @@ set ttyfast " Set that we have a fast connection for this terminal.
 set nofoldenable " Disable folding, I don't really like it in vim.
 set t_Co=256 " Enable 256 colors
 colorscheme Tomorrow-Night-Bright " Set a nice colorscheme.
-syntax enable " Enable syntax highlighting.
 
 " Remap the <leader> to ,.
 let mapleader = ","
