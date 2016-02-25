@@ -3,6 +3,7 @@
 .local-settings
 .viminfo
 .vim/.netrwhist
+.vim/autoload
 .vim/backup
 .vim/swapfiles
 .vim/plugged
