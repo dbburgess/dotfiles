@@ -147,6 +147,21 @@ nnoremap <leader><space> :noh<cr>
 nnoremap / /\v
 vnoremap / /\v
 
+" Helpful function to strip trailing whitespaces,
+" but also while maintaining cursor position.
+" Source: http://unix.stackexchange.com/a/75438
+function! <SID>StripTrailingWhitespaces()
+    " Only strip if the b:noStripeWhitespace variable isn't set
+    if exists('b:noStripWhitespace')
+        return
+    endif
+
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
 " ------------------------------ "
 " Handy Custom Shortcuts:
 " ------------------------------ "
@@ -193,7 +208,14 @@ let g:neocomplcache_enable_at_startup = 1
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " Strip trailing whitespace from all lines when saving.
-autocmd BufWritePre * :%s/\s\+$//e
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+" Don't strip trailing whitespace in diff file types.
+" This was particularly problematic for me when editing
+" a git patch, as if the patch had trailing whitespace,
+" the patch would fail when I tried to apply it.
+" Source: http://stackoverflow.com/a/6496995/5191100
+autocmd FileType diff let b:noStripWhitespace=1
 
 " vim-airline configuration.
 let g:airline_powerline_fonts = 1
