@@ -106,6 +106,13 @@ set smarttab " Make tabs smart.
 set autoindent " Automatically indent a new line to the current level.
 set backspace=indent,eol,start " Make backspace behave sanely.
 
+" Preferred tab settings for JavaScript
+augroup configgroup
+    autocmd FileType javascript setlocal tabstop=2
+    autocmd FileType javascript setlocal shiftwidth=2
+    autocmd FileType javascript setlocal softtabstop=2
+augroup END
+
 " Display / visual cue settings.
 set title " Enable setting the terminal title, when possible.
 set number " Enable showing line numbers.
