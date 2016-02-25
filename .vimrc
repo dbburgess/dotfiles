@@ -198,5 +198,10 @@ autocmd BufWritePre * :%s/\s\+$//e
 " vim-airline configuration.
 let g:airline_powerline_fonts = 1
 
+" Configure CommandT's ignore list.
+let g:CommandTWildIgnore = &wildignore
+let g:CommandTWildIgnore .= ',**/.git/*'
+let g:CommandTWildIgnore .= ',**/node_modules/*'
+
 " Stuff to think about / try out:
 " :help shortmess=???
