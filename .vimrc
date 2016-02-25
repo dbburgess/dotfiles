@@ -27,16 +27,54 @@ Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && /opt/local/bin/ruby2.0 e
 " YouCompleteMe requires compilation with python.
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
-" Git changes in the vim gutter, next to line numbers.
-Plug 'airblade/vim-gitgutter'
-
 " Better % matching.
 Plug 'tmhedberg/matchit'
+
+" Automagically set paste mode when pasting.
+Plug 'ConradIrwin/vim-bracketed-paste'
+
+" Git integration.
+Plug 'tpope/vim-fugitive'
+
+" Syntax checking.
+Plug 'scrooloose/syntastic'
+
+" Quoting and other stuff, made easy!
+Plug 'tpope/vim-surround'
+
+" Auto-close characters that are usually paired, such as parenthesis.
+" Prevent auto closing quotes in vim files.
+Plug 'spf13/vim-autoclose'
+let g:autoclose_vim_commentmode = 1
 
 " -------------------------------
 " Fun UI plugins.
 " -------------------------------
-Plug 'vim-airline/vim-airline' " Sweet upgraded status bar.
+" Sweet upgraded status bar.
+Plug 'vim-airline/vim-airline'
+
+" Nifty startup screen.
+Plug 'mhinz/vim-startify'
+
+" File exploration!
+" The second plugin here makes it behave sanely.
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+
+" Undo trees!
+Plug 'mbbill/undotree'
+
+" Git changes in the vim gutter, next to line numbers.
+Plug 'airblade/vim-gitgutter'
+
+" Nice line indentation indicators.
+" Modifying the default indicator color to be much darker.
+Plug 'Yggdroot/indentLine'
+let g:indentLine_color_term = 237
+
+" A handy color table for terminal.
+" Open using :XtermColorTable
+Plug 'guns/xterm-color-table.vim'
 
 " -------------------------------
 " Language-specific plugins.
@@ -56,6 +94,9 @@ Plug 'keith/swift.vim', { 'for': 'swift' }
 
 " --- LESS.
 Plug 'groenewege/vim-less', { 'for': 'less' }
+
+" --- Markdown.
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 " --- Lua.
 Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
@@ -207,6 +248,9 @@ nnoremap <C-l> <C-w>l
 " You must run this to enable it: sudo cpan JSON::XS
 map <leader>jf <Esc>:%!json_xs -f json -t json-pretty<CR>
 
+" Handy shortcuts for our plugins.
+map <leader>e :NERDTreeTabsToggle<CR>
+map <leader>u :UndotreeToggle<CR>
 
 " Enable Neocomplcache plugin (for awesome auto-complete).
 let g:neocomplcache_enable_at_startup = 1
