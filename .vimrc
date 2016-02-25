@@ -27,6 +27,12 @@ Plug 'wincent/Command-T', { 'do': 'cd ruby/command-t && /opt/local/bin/ruby2.0 e
 " YouCompleteMe requires compilation with python.
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
+" Git changes in the vim gutter, next to line numbers.
+Plug 'airblade/vim-gitgutter'
+
+" Better % matching.
+Plug 'tmhedberg/matchit'
+
 " -------------------------------
 " Fun UI plugins.
 " -------------------------------
