@@ -41,7 +41,26 @@ Plug 'vim-airline/vim-airline' " Sweet upgraded status bar.
 " -------------------------------
 " Language-specific plugins.
 " -------------------------------
+
+" --- JavaScript.
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" Semantic auto completion for JavaScript (hooks into YCM).
+Plug 'marijnh/tern_for_vim', { 'for': 'javascript' }
+" Syntax for JSX.
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+" Permit JSX syntax in .js files.
+let g:jsx_ext_required = 0
+
+" --- Swift.
+Plug 'keith/swift.vim', { 'for': 'swift' }
+
+" --- LESS.
 Plug 'groenewege/vim-less', { 'for': 'less' }
+
+" --- Lua.
+Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
+Plug 'xolox/vim-misc', { 'for': 'lua' }
+Plug 'xolox/vim-lua-inspect', { 'for': 'lua' }
 
 call plug#end()
 " --- Finish vim-plug Configuration -------------------------- "
