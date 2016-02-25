@@ -232,9 +232,6 @@ nmap <silent> <leader>s :set nolist!<CR>
 " Use jj to escape insert mode.
 inoremap jj <ESC>
 
-" Map <leader>a to run ack.
-nnoremap <leader>a :Ack
-
 " Useful mappings for splits.
 " <leader>w opens a new vertical split.
 nnoremap <leader>w <C-w>v<C-w>l
@@ -244,19 +241,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Format json files easily.
-" You must run this to enable it: sudo cpan JSON::XS
-map <leader>jf <Esc>:%!json_xs -f json -t json-pretty<CR>
-
 " Handy shortcuts for our plugins.
 map <leader>e :NERDTreeTabsToggle<CR>
 map <leader>u :UndotreeToggle<CR>
-
-" Enable Neocomplcache plugin (for awesome auto-complete).
-let g:neocomplcache_enable_at_startup = 1
-
-" Enable usage of ack from within vim.
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 
 " Strip trailing whitespace from all lines when saving.
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
@@ -275,6 +262,3 @@ let g:airline_powerline_fonts = 1
 let g:CommandTWildIgnore = &wildignore
 let g:CommandTWildIgnore .= ',**/.git/*'
 let g:CommandTWildIgnore .= ',**/node_modules/*'
-
-" Stuff to think about / try out:
-" :help shortmess=???
