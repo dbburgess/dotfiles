@@ -5,6 +5,7 @@
 .vim/.netrwhist
 .vim/backup
 .vim/swapfiles
+.vim/plugged
 .neocon
 .npm
 .lesshst
