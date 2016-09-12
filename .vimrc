@@ -102,6 +102,9 @@ Plug 'groenewege/vim-less', { 'for': 'less' }
 " --- Markdown.
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
+" --- Dockerfile.
+Plug 'ekalinin/Dockerfile.vim'
+
 " --- Lua.
 Plug 'xolox/vim-lua-ftplugin', { 'for': 'lua' }
 Plug 'xolox/vim-misc', { 'for': 'lua' }
