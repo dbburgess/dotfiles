@@ -281,6 +281,8 @@ autocmd FileType diff let b:noStripWhitespace=1
 " vim-airline configuration.
 let g:airline_powerline_fonts = 1
 
+com! FormatJSON %!python -m json.tool
+
 " Configure CommandT's ignore list.
 let g:CommandTWildIgnore = &wildignore
 let g:CommandTWildIgnore .= ',**/.git/*'
