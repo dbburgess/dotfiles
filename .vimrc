@@ -161,6 +161,12 @@ augroup configgroup
     autocmd FileType javascript setlocal softtabstop=2
 augroup END
 
+augroup configgroup
+    autocmd FileType ruby setlocal tabstop=2
+    autocmd FileType ruby setlocal shiftwidth=2
+    autocmd FileType ruby setlocal softtabstop=2
+augroup END
+
 " Display / visual cue settings.
 set title " Enable setting the terminal title, when possible.
 set number " Enable showing line numbers.
@@ -183,6 +189,16 @@ autocmd WinLeave * setlocal nocursorcolumn
 
 " Force md files to be markdown, instead of Modula-2.
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" Force fastlane config files to be Ruby.
+autocmd BufNewFile,BufReadPost Appfile set filetype=ruby
+autocmd BufNewFile,BufReadPost Deliverfile set filetype=ruby
+autocmd BufNewFile,BufReadPost Fastfile set filetype=ruby
+autocmd BufNewFile,BufReadPost Gymfile set filetype=ruby
+autocmd BufNewFile,BufReadPost Matchfile set filetype=ruby
+
+" Force cocoapod config files to be Ruby.
+autocmd BufNewFile,BufReadPost Podfile set filetype=ruby
 
 " Settings for moving / searching.
 set ignorecase " Set searching to ignore case by default.
