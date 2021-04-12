@@ -15,4 +15,5 @@ cask "vivaldi"
 cask "whatsapp"
 cask "zoom"
 
+brew "antigen"
 brew "git"
