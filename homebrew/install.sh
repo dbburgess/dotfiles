@@ -34,7 +34,7 @@ then
 fi
 
 # Install and run Bundle.
-cd $ZSH/homebrew
+cd $DOTFILES/homebrew
 brew bundle
 
 exit 0
