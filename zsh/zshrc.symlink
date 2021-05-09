@@ -21,6 +21,13 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
 
+# If you want the plugin to defer the load of nvm to speed-up the start of your zsh session, set NVM_LAZY to 1.
+# This will use the --no-use parameter when loading nvm, and will create a function for node, npm and yarn, so when you call either of these three, nvm will load with nvm use default.
+NVM_LAZY=1
+
+# If NVM_AUTOLOAD is set to 1, the plugin will automatically load a node version when if finds a .nvmrc file in the current working directory indicating which node version to load.
+# NVM_AUTOLOAD=1
+
 source $(brew --prefix)/share/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
@@ -28,6 +35,7 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
+antigen bundle nvm
 antigen bundle command-not-found
 
 # Syntax highlighting bundle.
