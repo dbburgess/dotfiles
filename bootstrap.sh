@@ -29,6 +29,7 @@ fi
 if [ ! -d "$HOME/.dotfiles" ]; then
   echo "Bootstrapping dotfiles for the first time..."
   git clone https://github.com/dbburgess/dotfiles.git "$HOME/.dotfiles"
+  $HOME/.dotfiles/scripts/bootstrap.sh
 else
   echo "dotfiles already setup."
   echo ""
