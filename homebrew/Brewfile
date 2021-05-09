@@ -6,6 +6,8 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 
 cask "1password"
+cask "google-cloud-sdk"
+cask "drawio"
 cask "iterm2"
 cask "notion"
 cask "slack"
@@ -16,4 +18,8 @@ cask "whatsapp"
 cask "zoom"
 
 brew "antigen"
+brew "cmatrix"
 brew "git"
+brew "jq"
+brew "nvm"
+brew "tfenv"
