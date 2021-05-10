@@ -148,5 +148,7 @@ else
   fail "error installing dependencies"
 fi
 
+p10k configure
+
 echo ''
 echo '  All installed!'
