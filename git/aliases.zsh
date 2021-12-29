@@ -1,0 +1,1 @@
+alias dependabot="git fetch --prune && git pull origin develop && git checkout -b dbburgess/upgrade-dependencies && git branch -a | grep 'dependabot' | awk '{\$1=\$1};1' | xargs -r git show-ref -s | xargs -r git cherry-pick"
